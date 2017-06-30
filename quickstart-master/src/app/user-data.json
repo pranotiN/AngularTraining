@@ -1,0 +1,30 @@
+{
+	"data" : [{
+ 		"firstName" : "Bill",
+ 		"lastName" : "Gates",
+ 		"dob" : "Dec 25 1965",
+ 		"income" : 50000,
+ 		"isWorking" : true,
+ 		"company" : "Microsoft Corporation",
+ 		"image" : "images/bill.jpg",
+ 		"vote" : 180
+ 	},{
+ 		"firstName" : "Steve",
+ 		"lastName" : "Jobs",
+ 		"dob" : "Jan 2 1968",
+ 		"income" : 0,
+ 		"isWorking" : false,
+ 		"company" : "Apple Inc.",
+ 		"image" : "images/steve.jpg",
+ 		"vote" : 150
+ 	},{
+ 		"firstName" : "Tim B.",
+ 		"lastName" : "Lee",
+ 		"dob" : "Feb 5 1962",
+ 		"income" : 40000,
+ 		"isWorking" : true,
+ 		"company" : "World Wide Web",
+ 		"image" : "images/tim.jpg",
+ 		"vote" : 200
+ 	}]
+}

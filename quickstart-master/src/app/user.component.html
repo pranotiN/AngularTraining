@@ -1,0 +1,90 @@
+<h2>User Component loaded Successfully!!!!</h2>
+<!-- 
+<h3>Value from Parent : {{name}}
+	<div>
+		<ng-content select="header"></ng-content>
+	</div>
+	
+	<div>
+		<ng-content select="footer"></ng-content>
+	</div>
+
+	<div>
+		<ng-content select=".newSection"></ng-content>
+	</div>
+
+</h3> -->
+
+<button class="btn btn-primary" (click)="increase()">Increase Counter</button>
+
+Counter Value :: {{userService.counter}}
+
+<div class="container">
+	Future Value Variable : {{data| async}}
+</div>
+
+<div>
+	<h2>Total Amount earned : {{totalIncome()}}</h2>
+</div>
+
+<div class="container">
+	<ul class="list-unstyled">
+
+		<li class="well" *ngFor="let user of users; let i = index; let f = first; let isOdd = odd; ">
+
+		
+			<img [src]="user.image"/>
+		
+
+		<h2>{{user.firstName | uppercase}} {{user.lastName | uppercase}}</h2>
+
+		<em class="pull-rigth">
+			Total Votes : {{user.vote}} 
+			<!-- <input type="number" 
+				class="form-control" 
+				[value]="user.vote"
+				(change)="user.vote=$event.target.value"> -->
+			<input type="number" [(ngModel)]="user.vote">
+		</em>
+
+		<button class="btn btn-info" (click)="moreInfo(user)">
+			More Info
+		</button>
+
+		<p [ngStyle]="{'color' : 'red', 'font-size':'14pt' }">
+			Date of Birth : {{user.dob | date : 'MMM-dd-yyyy'}}
+		</p>
+
+		<p *ngIf="user.isWorking===true; then ifTemplate else elseTemplate">
+		</p>
+
+		<ng-template #ifTemplate>
+			<p [ngClass]="classBinding">
+			Income : {{user.income | doubleMe | currency : 'EUR' : true}}
+			</p>
+		</ng-template>
+
+		<ng-template #elseTemplate>
+			<p>{{user.firstName}} is not working now!!!</p>
+		</ng-template>
+		
+		</li>
+	</ul>
+</div>
+
+<!-- <div [ngSwitch]="'steve'">
+	<div *ngSwitchCase="'steve'">First Case output</div>
+	<div *ngSwitchCase="'bill'">Second Case output</div>
+	<div *ngSwitchDefault>output</div>
+</div> -->
+
+<!-- Stateless Pipes
+lowercase
+number
+percent
+json
+
+Stateful
+async 
+
+Custom Pipe-->

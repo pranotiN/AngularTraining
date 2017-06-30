@@ -1,0 +1,22 @@
+<h2>Your Component loaded Successfully!!!!</h2>
+
+<ul class="list-unstyled">
+	<li><a [routerLink]="['personal']">Personal Info</a></li>
+	<li><a [routerLink]="['professional']">Professional Info</a></li>
+</ul>
+<hr>
+
+<div class="container">
+		<router-outlet></router-outlet>
+</div>
+
+
+	<h3>You are coming via Route : : {{id}}</h3>
+	<hr/>
+	<button class="btn btn-primary" (click)="increase()">Increase Counter</button>
+
+	Counter Value :: {{userService.counter}}
+	
+
+
+

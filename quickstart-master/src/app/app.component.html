@@ -1,0 +1,30 @@
+<h1>First Angular SPA App</h1>
+
+<div class="container">
+	<ul class="list-unstyled nav navbar-nav navbar-default">
+		<li><a [routerLink]="['']">Home</a></li>
+		<li><a [routerLink]="['/about']">About</a></li>
+		<li><a [routerLink]="['/contact']">Contact</a></li>
+		<li><a [routerLink]="['/template']">Template Form</a></li>
+		<li><a [routerLink]="['/reactive']">Reactive Form</a></li>
+		<li><a [routerLink]="['/lazy']">Load Lazy</a></li>
+		<li *ngFor="let product of products"><a [routerLink]="['/yours', product.id]">{{product.name}}</a></li>
+	</ul>
+</div> 
+
+<div class="container">
+	<product-comp>Product Comp will go here...</product-comp>
+</div>
+
+<hr>
+
+<div class="container">
+	<button class="btn btn-default" (click)="increase()">
+		Increase
+	</button>
+  	<p>Counter Value in App Comp :: {{productService.counter}}</p>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

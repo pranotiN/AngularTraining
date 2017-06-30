@@ -1,0 +1,19 @@
+<div class="container">
+
+<h2>Enter value in Parent Textbox 
+	<input type="text" name="" #parentCtrl (keyup)=0>
+</h2>
+	
+
+
+<div class="contianer">
+	<child-comp (childChange)="childValue = $event" 
+		[parentValue]="parentCtrl.value">
+			Will load child comp here...
+		</child-comp>
+</div>
+
+
+<h2 style-me>Child Value in Parent :: {{childValue}}</h2>
+
+</div>

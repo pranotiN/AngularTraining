@@ -1,0 +1,9 @@
+<div class="container well">
+	<h1>Child Component Loaded....</h1>
+	<h2>Parent Value :: {{parentValue}}</h2>
+
+	<h2 style-me>Enter Value in Child Textbox : 
+	<input type="text" #childCtrl (keyup)="onChange(childCtrl.value)">
+	</h2>
+
+</div>
